@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd ~/Documents/your-project && git status --porcelain | grep -q . && git add . && git commit -m 'auto-save: session closed without done' && git push && echo '{\"systemMessage\": \"🔄 auto-saved and pushed (session closed without done)\"}' || true"
+          }
+        ]
+      }
+    ]
+  }
+}
